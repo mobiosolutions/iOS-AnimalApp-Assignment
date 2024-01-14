@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewHeader" customModule="Animal" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBackScreen" destination="Kqm-zt-CSE" id="2i9-Kw-OtE"/>
+                <outlet property="btnCancel" destination="jwh-rp-pbs" id="Iuk-KX-Olp"/>
+                <outlet property="btnFavourite" destination="TUQ-0i-7Uu" id="4B8-JO-zA6"/>
+                <outlet property="btnFilter" destination="CFK-bE-gi0" id="Wjc-T5-Okt"/>
+                <outlet property="lblHeader" destination="lP0-7E-piy" id="aKK-Cr-nUn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hQJ-oD-auh">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP0-7E-piy" customClass="RegularLabel" customModule="Animal" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNJ-bm-fsL">
+                    <rect key="frame" x="276" y="0.0" width="138" height="46"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUQ-0i-7Uu" customClass="MyButton" customModule="Animal" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="2aS-Xt-8DP"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="heart.fill" catalog="system"/>
+                            <connections>
+                                <action selector="btnFavoriteClicked:" destination="-1" eventType="touchUpInside" id="Q4q-xN-EIq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFK-bE-gi0" customClass="MyButton" customModule="Animal" customModuleProvider="target">
+                            <rect key="frame" x="46" y="0.0" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="rdh-yE-JhE"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="filter"/>
+                            <connections>
+                                <action selector="btnFilterClicked:" destination="-1" eventType="touchUpInside" id="X7R-Qd-J08"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-rp-pbs" customClass="MyButton" customModule="Animal" customModuleProvider="target">
+                            <rect key="frame" x="92" y="0.0" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="Rbh-5b-GDr"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="xmark" catalog="system"/>
+                            <connections>
+                                <action selector="btnCancelClicked:" destination="-1" eventType="touchUpInside" id="ubi-sn-yQ7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Ox2-yy-x2Y"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3YO-qk-zDQ">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqm-zt-CSE" customClass="MyButton" customModule="Animal" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Kqm-zt-CSE" secondAttribute="height" multiplier="1:1" id="ahq-eA-9x3"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="chevron.backward" catalog="system"/>
+                            <connections>
+                                <action selector="btnBackScreenClicked:" destination="-1" eventType="touchUpInside" id="nSL-5r-jKV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="f5H-90-Smt"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="lP0-7E-piy" secondAttribute="bottom" id="8ue-cU-kdd"/>
+                <constraint firstAttribute="trailing" secondItem="lP0-7E-piy" secondAttribute="trailing" id="LEf-h7-cp5"/>
+                <constraint firstItem="lP0-7E-piy" firstAttribute="leading" secondItem="hQJ-oD-auh" secondAttribute="leading" id="X2o-wB-kxZ"/>
+                <constraint firstAttribute="trailing" secondItem="VNJ-bm-fsL" secondAttribute="trailing" id="dxg-x2-COW"/>
+                <constraint firstItem="lP0-7E-piy" firstAttribute="top" secondItem="hQJ-oD-auh" secondAttribute="top" id="ehk-dd-0Pv"/>
+                <constraint firstItem="VNJ-bm-fsL" firstAttribute="top" secondItem="hQJ-oD-auh" secondAttribute="top" id="f8M-6w-3vI"/>
+                <constraint firstItem="3YO-qk-zDQ" firstAttribute="leading" secondItem="hQJ-oD-auh" secondAttribute="leading" id="hfn-yw-QD0"/>
+                <constraint firstItem="3YO-qk-zDQ" firstAttribute="top" secondItem="hQJ-oD-auh" secondAttribute="top" id="iJR-8c-Rlr"/>
+                <constraint firstAttribute="bottom" secondItem="3YO-qk-zDQ" secondAttribute="bottom" id="kPb-M5-6Ch"/>
+                <constraint firstAttribute="bottom" secondItem="VNJ-bm-fsL" secondAttribute="bottom" id="rLh-dh-VMf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="111.45038167938931" y="150"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="filter" width="13.333333015441895" height="14"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
